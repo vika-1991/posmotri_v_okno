@@ -9,6 +9,7 @@ html {
 }
 
 .page {
+  margin: 0;
   inline-size: 1200px;
   block-size: 100%;
   color: #fff;
@@ -42,25 +43,22 @@ ol {
 .content { 
   display: flex;
   align-items: end;
-  padding-top: 93px;
-  padding-left: 22px;
+  padding-top: 102px;
+  padding-right: 5px;
 }
 
 .result {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  margin-top: 70px;
 }
 
 .result__video-container {
   inline-size: 711px;
-  block-size: 384px;
-  position: relative;
+  block-size: 400px;
+  padding-bottom: 16px;
 }
 
 .result__video {
-  position: relative;
   object-fit: cover;
   object-position: center;
   width: 100%;
@@ -70,7 +68,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: start;
-  margin-top: 18px;
+
   gap: 40px;
   cursor: pointer;
 }
@@ -91,8 +89,13 @@ ol {
   gap: 5px;
 }
 
+/*
 .search-form__label:focus {
   outline: 0;
+}
+
+.search-form__label:active {
+border: 1px solid rgb(255, 255, 255);
 }
 
 .search-form__label:hover {
@@ -100,11 +103,9 @@ ol {
   outline-offset: 5px solid rgb(255, 255, 255);
 }
 
-.search-form__label:focus {
-  outline-offset: 0;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  border-top: 1px solid rgb(255, 255, 255);
-}
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid rgb(255, 255, 255);
+} */
 
 .search-form__checkbox-list {
   display: flex;
@@ -150,38 +151,36 @@ ol {
   text-align: left;
 }
 
+.search-form__textfield:focus {
+  outline: none; 
+}
+
+.search-form__textfield:active { 
+border: 1px solid rgb(255, 255, 255);
+}
+
+.search-form__textfield:hover {
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: 5px solid rgb(255, 255, 255);
+} 
+
+.search-form__textfield:has(:focus-visible) {
+  outline: 1px solid rgb(255, 255, 255);
+} 
+
+.search-form__checkbox {
+  opacity: 1;
+}
+
 .visually-hidden {
   position: absolute;
   inline-size: 1px;
-  block-size: 100%;
+  block-size: 1px;
   overflow: hidden;
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
 }
-
-.search-form__textfield::has(:focus-visible) {
-  outline-offset: 1;
-}
-
-.search-form__textfield:focus {
-  outline: none;
-}
-
-.search-form__textfield:active { 
-box-sizing: border-box;
-border: 1px solid rgb(255, 255, 255);
-}
-
-.search-form__textfield:hover {
-
-} 
-
-.search-form__textfield:focus-visible {
-  box-sizing: border-box;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  border-top: 1px solid rgb(255, 255, 255);
-} 
 
 .search-form__pseudo-checkbox {
   display: flex;
@@ -190,42 +189,64 @@ border: 1px solid rgb(255, 255, 255);
   width: 19px;
   height:19px;
   border: 1px solid #fff;
+  position: relative;
   cursor: pointer;
-
 }
 
+.search-form__pseudo-checkbox::after {
+  display: block;
+  background-color: #fff;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+
+.search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
+  content: "";
+}
+
+/*
 .search-form__pseudo-checkbox:active {
- outline: 1px solid rgb(255, 255, 255);
+ border: 1px solid rgb(255, 255, 255);
 }
 
-.search-form__pseudo-checkbox+span:hover {
+.search-form__pseudo-checkbox:hover {
   border: 1px solid rgb(255, 255, 255);
   text-decoration: underline;
+
 }
 
 .search-form__pseudo-checkbox:focus {
-  outline: 1px solid rgb(255, 255, 255);
+  outline: none;
 }
 
+.search-form__pseudo-checkbox:has(:focus-visible) {
+  border: 1px solid rgb(255, 255, 255);
+} */
 
-.search-form__checkbox:checked + search-form__pseudo-checkbox + span::after {
-  content: '';
-  background-color: #fff;
-  background-position: center;
-  width: 15px;
-  height: 15px;
-  outline: 1px solid #fff;
-  outline-offset: 1px;
+.search-form__label-text {
+  appearance: 0;
+}
+/*
+.search-form__label-text :focus {
+  outline: none;
+}
+
+.search-form__label-text :hover {
+  border: 1px solid rgb(255, 255, 255); 
   cursor: pointer;
-}
+  text-decoration: underline;
+}*/
+
 
 .button {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-weight: 700;
   font-size: inherit;
   line-height: 22px;
-  border: 1px solid white;
-  color: white;
+  border: 1px solid #fff;
+  color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -240,37 +261,37 @@ button:focus {
 }
 
 .button:hover {
-  border: 1px solid rgb(255, 255, 255); 
+  border: 1px solid #fff; 
   cursor: pointer;
   text-decoration: underline;
 }
 
 .button:active {
   text-decoration: none;
-  border: 1px solid rgb(255, 255, 255);
+  border: 1px solid #fff;
   background: rgb(84, 80, 80);
 }
 
-.button:focus-visible{
-  outline: 1px solid rgb(255, 255, 255);
+.button:has(:focus-visible) {
+  outline: 1px solid #fff;
   outline-offset: 1px;
 }
 
 .search-form__submit-button {
-  margin-top: 15px;
-  width: 194px;
+  width: 100%;
   letter-spacing: 1px;
   cursor: pointer;
 }
 
 .content__details {
-  height: 534px;
+  height: 528px;
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 30px;
+  margin-left: 30px;
+  gap: 22px;
 }
 
 .title {
@@ -280,7 +301,6 @@ button:focus {
   line-height: 94%;
   text-align: left;
   text-transform: uppercase;
-  margin-bottom: 18px;
 }
 
 .content__accent {
@@ -311,6 +331,12 @@ button:focus {
   inset: 0;
 }
 
+.content__card-link {
+  margin: 2px;
+  display: block; /* нужно сделать блочным*/
+  text-decoration: none;
+}
+
 .content__card-link_current {
   color: #fff;
   cursor: pointer;
@@ -322,16 +348,16 @@ button:focus {
   background-color: #545454;
 }
 
+.content__card-link:has(:focus-visible) {
+  outline: 1px solid rgb(255, 255, 255);
+  outline-offset: 1px;
+}
+
 .content__card-link:hover {
   color: #fff;
   text-decoration: underline;
   cursor: pointer;
-}
-
-.content__card-link {
-  margin: 2px;
-  display: block; /* нужно сделать блочным*/
-  text-decoration: none;
+  border: 1px dashed rgb(84, 80, 80);
 }
 
 .content__video-card {
@@ -370,6 +396,13 @@ button:focus {
 .content__video-card-thumbnail {
    width: 194px;
    height: 103px;
+  
+}
+
+.content__video-card-thumbnail:hover {
+  width: 194px;
+  height: 103px;
+  border: 1px dashed rgb(84, 80, 80);
 }
 
 .more-button {
