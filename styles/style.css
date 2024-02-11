@@ -19,7 +19,6 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 h1,
@@ -44,8 +43,9 @@ ol {
 .content { 
   display: flex;
   align-items: end;
+  /*
   padding-top: 102px;
-  padding-right: 5px;
+  padding-right: 5px; */
 }
 
 .result {
