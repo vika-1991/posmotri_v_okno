@@ -9,7 +9,7 @@ html {
 }
 
 .page {
-  margin: 0;
+  margin: auto;
   inline-size: 1200px;
   block-size: 100%;
   color: #fff;
@@ -326,7 +326,6 @@ button:focus {
   justify-content: center;
   align-items: center;
   background:rgb(84, 80, 80);
-  position: absolute;
   inset: 0;
 }
 
@@ -409,7 +408,6 @@ button:focus {
 }
 
 .error {
-  position: absolute;
   inset: 0;
   background-color: rgb(84, 80, 80);
 }
