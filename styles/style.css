@@ -43,9 +43,6 @@ ol {
 .content { 
   display: flex;
   align-items: end;
-  /*
-  padding-top: 102px;
-  padding-right: 5px; */
 }
 
 .result {
@@ -56,7 +53,6 @@ ol {
 .result__video-container {
   inline-size: 711px;
   block-size: 400px;
-  padding-bottom: 16px;
   position: relative;
 }
 
@@ -332,7 +328,7 @@ button:focus {
 
 .content__card-link {
   margin: 2px;
-  display: block; /* нужно сделать блочным*/
+  display: block;
   text-decoration: none;
 }
 
