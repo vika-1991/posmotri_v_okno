@@ -126,26 +126,20 @@ border: 1px solid rgb(255, 255, 255);
 .search-form__textfield {
   display: flex;
   align-items: start;
+  font-family: inherit;
+  font-size: inherit;
   font-weight: inherit;
   appearance: none;
   line-height: 22px;
-  font-family: inherit;
-  font-size: inherit;
   text-align: left;
   background-color: transparent;
   min-width: 225px;
   min-height: 27px;
-  border-bottom: 1px solid rgb(255, 255, 255);
-  border-top: 1px solid rgb(255, 255, 255);
+  border-bottom: 1px solid #fff;
+  border-top: 1px solid #fff;
   border-left: none;
   border-right: none;
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 22px;
-  letter-spacing: 0%;
-  text-align: left;
 }
 
 .search-form__textfield:focus {
@@ -153,20 +147,20 @@ border: 1px solid rgb(255, 255, 255);
 }
 
 .search-form__textfield:active { 
-border: 1px solid rgb(255, 255, 255);
+border: 1px solid #fff;
 }
 
 .search-form__textfield:hover {
-  outline: 1px solid rgb(255, 255, 255);
-  outline-offset: 5px solid rgb(255, 255, 255);
+  outline: 1px solid #fff;
+  outline-offset: 5px solid #fff;
 } 
 
 .search-form__textfield:has(:focus-visible) {
-  outline: 1px solid rgb(255, 255, 255);
+  outline: 1px solid #fff;
 } 
 
 .search-form__checkbox {
-  opacity: 1;
+  opacity: 0;
 }
 
 .visually-hidden {
@@ -280,7 +274,7 @@ button:focus {
 }
 
 .content__details {
-  height: 528px;
+  height: 534px;
   width: 100%;
   display: flex;
   flex-direction: column;
