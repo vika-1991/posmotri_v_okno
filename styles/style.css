@@ -88,7 +88,6 @@ ol {
   gap: 5px;
 }
 
-
 .search-form__label:focus {
   outline: 0;
   text-decoration: underline;
@@ -188,7 +187,6 @@ border: 1px solid #fff;
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
 }
-
 
 .search-form__pseudo-checkbox:active {
  border: 1px solid #fff;
@@ -303,7 +301,6 @@ button:focus {
   outline: none;
 }
 
-
 .content__card-link:active {
   color: #fff;
   background-color: #545454;
@@ -318,7 +315,6 @@ button:focus {
   color: #fff;
   text-decoration: underline;
   cursor: pointer;
-  
 }
 
 .content__video-card {
@@ -327,7 +323,6 @@ button:focus {
   align-items: flex-start; 
   object-position: center;
   object-fit: cover; 
-
 }
 
 .content__video-card-title {
