@@ -111,13 +111,13 @@ ol {
 .search-form__fieldset-title {
   display: flex;
   min-width: 212px;
-  height: 27px;
   align-items: start;
   font-weight: inherit;
   line-height: 22px;
   font-family: inherit;
   font-size: inherit;
   text-align: left;
+  margin-bottom: 5px;
 }
 
 .search-form__textfield {
@@ -336,6 +336,7 @@ button:focus {
   text-overflow: ellipsis;
   white-space: nowrap; 
   overflow: hidden;
+  max-width: 200px;
 }
 
 .content__video-card-description {
