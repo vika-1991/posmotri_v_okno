@@ -93,8 +93,8 @@ ol {
   text-decoration: underline;
 }
 
-.search-form__label_search-form__label-text:hover {
-  border: 2px solid #fff;
+.search-form__label:hover, .search-form__label-text:hover {
+  text-decoration: underline;
 }
 
 .search-form__label:has(:focus-visible) {
